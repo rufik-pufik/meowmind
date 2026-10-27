@@ -1,0 +1,434 @@
+/* MeowMind / MOBILE v34 — Figma: Page «MeowMind — мобильный макет v33».
+   Preserves the approved desktop styling and animation (all overrides <=600px).
+   Artboard: 390px, Figma frames 550:2 / 550:20 / 550:35 / 552:2 / 552:21 / 552:43.
+*/
+.mobile-figma-fan,.mobile-feature-card-text,.about-mobile-wordmark {display:none;}
+@media (max-width:600px) {
+  html {scroll-padding-top:80px !important;}
+  body {background:#fafafa;overflow-x:hidden;}
+  /* Original Figma has rounded full-bleed cards, not a white gutter. */
+  main > .panel,main > section.panel,.features .feature.panel,.faq-section.panel,.benefits-sticky.panel {margin:0 !important;border-radius:16px !important;}
+  .wordmark.panel {display:none !important;}
+  .panel:not(.faq-section) {scroll-margin-top:0 !important;}
+  /* Header: logo x=10, CTA x=186, menu x=322 on a 390px canvas. */
+  body .header {position:fixed!important;inset:0 0 auto!important;width:100%!important;height:82px!important;max-width:none!important;padding:0!important;display:block!important;z-index:200!important;pointer-events:none!important;background:transparent!important;border:0!important;box-shadow:none!important;}
+  .header::before {display:none!important;content:none!important;}
+  body .header > * {pointer-events:auto!important;}
+  body .header .logo {position:absolute!important;left:10px!important;top:7px!important;width:65px!important;height:69px!important;border-radius:0!important;filter:none!important;overflow:visible!important;}
+  body .header .logo img {height:100%!important;width:100%!important;transform:none!important;object-fit:contain!important;}
+  body .header .header-cta {position:absolute!important;top:18px!important;right:92px!important;left:auto!important;width:112px!important;min-width:0!important;height:47px!important;min-height:0!important;max-width:none!important;padding:0!important;margin:0!important;display:flex!important;justify-content:center!important;align-items:center!important;font-family:Poppins,sans-serif;font-weight:700!important;font-size:15px!important;line-height:1!important;border:2.4px solid #ffc7bb!important;border-radius:24px!important;background:linear-gradient(180deg,#ff5a57,#fe795b)!important;box-shadow:none!important;}
+  body .header .menu-toggle {position:absolute!important;right:18px!important;top:18px!important;display:flex!important;flex-direction:column!important;justify-content:center!important;align-items:center!important;width:50px!important;height:47px!important;padding:0!important;gap:6px!important;background:linear-gradient(#ff5a57,#fe795b)!important;border:2.35px solid #ffc7bb!important;border-radius:16px!important;box-shadow:none!important;}
+  body .header .menu-toggle span {height:3px!important;width:25px!important;border-radius:2px!important;background:white!important;}
+  body .header .nav {display:none!important;position:absolute!important;top:74px!important;right:18px!important;left:18px!important;margin:0!important;width:auto!important;padding:10px!important;max-width:none!important;flex-direction:column!important;gap:3px!important;background:rgba(185,140,214,.96)!important;border:2px solid #f7b0b4!important;border-radius:18px!important;box-shadow:0 12px 20px #41315f39!important;}
+  body .header .nav.open {display:flex!important;}
+  body .header .nav a {color:#fff!important;display:block!important;text-align:center!important;padding:9px!important;font-size:14px!important;}
+  /* 01: hero, 390 x 844 */
+  .hero.panel {min-height:844px!important;height:844px!important;width:100%!important;border-radius:16px!important;position:relative!important;}
+  .hero .hero-video,.hero .hero-shade {height:100%!important;width:100%!important;}
+  .hero .hero-video {object-fit:cover!important;object-position:center center!important;}
+  .hero .hero-shade {background:linear-gradient(180deg,rgba(20,15,46,.03),rgba(20,15,46,.58))!important;}
+  .hero .hero-content {position:absolute!important;top:347px!important;left:0!important;right:0!important;inset:auto 0 auto!important;transform:none!important;width:100%!important;max-width:none!important;padding:0 12px!important;display:flex!important;flex-direction:column!important;align-items:center!important;text-align:center!important;}
+  .hero .hero-title-image {margin:0!important;padding:0!important;width:100%!important;max-width:353px!important;height:auto!important;}
+  .hero .hero-title-image img {width:100%!important;height:auto!important;display:block!important;object-fit:contain!important;}
+  .hero .hero-content p {font-family:Poppins,sans-serif!important;font-weight:700!important;font-size:16px!important;line-height:1.24!important;margin:17px 0 0!important;white-space:nowrap!important;text-shadow:none!important;letter-spacing:0!important;}
+  .hero .hero-button {margin-top:29px!important;width:186px!important;height:47px!important;min-width:0!important;min-height:0!important;padding:0!important;line-height:1!important;font-size:14.5px!important;border:2.2px solid #ffc7bb!important;box-shadow:none!important;}
+  .hero .hero-social {left:auto!important;right:19px!important;bottom:18px!important;gap:17px!important;}
+  .hero .hero-social .social-circle {width:50px!important;height:50px!important;border-radius:15px!important;background:rgba(112,105,65,.85)!important;}
+  .hero .hero-social img {display:block!important;width:26px!important;height:26px!important;object-fit:contain!important;}
+  /* 02: purple section x390, h844. The image already includes the correct kitten. */
+  .about.panel {height:844px!important;min-height:844px!important;max-height:844px!important;aspect-ratio:auto!important;background:linear-gradient(180deg,#b8b2f4,#7a65d0)!important;overflow:hidden!important;}
+  .about .about-inner {position:relative!important;display:block!important;width:100%!important;height:844px!important;min-height:844px!important;padding:0!important;overflow:hidden!important;}
+  .about .about-inner #about-art {display:none!important;}
+  .about .about-mobile-wordmark {display:block!important;position:absolute!important;z-index:3!important;top:115px!important;left:-1px!important;width:398px!important;height:auto!important;max-width:none!important;filter:none!important;}
+  .about .about-inner .about-mobile-illustration {display:block!important;position:absolute!important;top:160px!important;left:0!important;right:auto!important;width:100%!important;height:439px!important;object-fit:cover!important;object-position:center center!important;max-width:none!important;max-height:none!important;margin:0!important;padding:0!important;border-radius:0!important;filter:none!important;z-index:2!important;}
+  .about .about-mobile-copy {display:block!important;position:absolute!important;top:590px!important;left:24px!important;width:342px!important;right:auto!important;padding:0!important;margin:0!important;z-index:4!important;color:#fff!important;}
+  .about .about-mobile-copy h2 {font-size:34px!important;line-height:1.24!important;margin:0 0 10px!important;font-family:Poppins,sans-serif!important;font-weight:600!important;}
+  .about .about-mobile-copy p {font-size:18px!important;line-height:1.24!important;margin:0!important;font-family:Poppins,sans-serif!important;font-weight:500!important;max-width:342px!important;}
+  .about .about-tabs {position:absolute!important;top:764px!important;bottom:auto!important;left:24px!important;right:auto!important;z-index:4!important;display:flex!important;width:auto!important;height:56px!important;margin:0!important;padding:0!important;gap:14px!important;align-items:center!important;}
+  .about .about-tabs > .about-tab,.about .about-tabs > .about-tab.active {position:static!important;flex:0 0 56px!important;width:56px!important;height:56px!important;font-size:22px!important;line-height:1!important;color:#e0d8ff!important;background:none!important;border-radius:28px!important;box-shadow:none!important;font-family:Poppins,sans-serif!important;font-weight:600!important;}
+  .about .about-tabs > .about-tab.active {color:white!important;background:rgba(183,162,239,.65)!important;}
+  .about .about-tabs > .about-tab::before,.about .about-tabs > .about-tab::after {content:none!important;}
+  /* 03: the fixed three-column portrait grid, exactly as arranged in Figma. */
+  #for-whom.audience.panel {display:block!important;position:relative!important;width:100%!important;height:844px!important;min-height:844px!important;padding:0!important;gap:0!important;overflow:hidden!important;background:#fafafa!important;}
+  .audience .audience-header {position:absolute!important;top:170px!important;left:0!important;width:100%!important;height:115px!important;margin:0!important;transform:none!important;opacity:1!important;}
+  .audience .audience-header h2 {position:relative!important;top:0!important;font-family:Poppins,sans-serif!important;font-size:64px!important;font-weight:800!important;line-height:1.24!important;letter-spacing:-.025em!important;white-space:nowrap!important;color:#9c76ef!important;margin:0!important;}
+  .audience .audience-header p {position:relative!important;margin:0!important;top:0!important;font-family:Poppins,sans-serif!important;font-weight:700!important;font-size:19px!important;color:#cbacff!important;line-height:1.24!important;}
+  .audience .reaction {position:absolute!important;z-index:4!important;height:30px!important;min-height:0!important;min-width:0!important;padding:4px 7px!important;border-radius:11px!important;font-family:Poppins,sans-serif!important;font-size:13px!important;color:#fff!important;line-height:22px!important;white-space:nowrap!important;opacity:1!important;}
+  .audience .reaction-heart {left:36px!important;right:auto!important;top:-11px!important;width:66px!important;transform:rotate(-10deg)!important;background:#ffa2b0!important;}
+  .audience .reaction-fire {left:295px!important;right:auto!important;top:-55px!important;width:61px!important;height:27px!important;font-size:12px!important;transform:rotate(9deg)!important;background:#ffc6ca!important;}
+  .audience .reaction-party,.audience .reaction-shock,.audience .reaction-flushed {display:block!important;padding:0!important;background:none!important;height:30px!important;line-height:30px!important;font-size:22px!important;transform:none!important;}
+  .audience .reaction-party {left:136px!important;top:-26px!important;}
+  .audience .reaction-shock {left:226px!important;top:-17px!important;}
+  .audience .reaction-flushed {display:none!important;}
+  .audience .audience-fan {display:none!important;}
+  .mobile-figma-fan {display:block!important;position:absolute!important;top:317px!important;left:0!important;width:100%!important;height:644px!important;overflow:hidden!important;z-index:1!important;}
+  .mobile-figma-fan-grid {display:grid;grid-template-columns:repeat(3,119px);column-gap:9px;width:375px;margin:0 auto;align-items:start;}
+  .mobile-people-col {display:flex;flex-direction:column;gap:19px;min-width:0;}
+  .mobile-people-col:nth-child(2) {padding-top:67px;}
+  .mobile-portrait {width:119px;height:202px;border:3px solid #b79ff4;border-radius:17px;overflow:hidden;margin:0;background:#fafafa;line-height:0;}
+  .mobile-portrait img {width:100%;height:100%;object-fit:cover;display:block;}
+  /* 04: exact rhythm of original phone, then a centered text card. */
+  #features.features {height:1624px!important;min-height:1624px!important;padding:0!important;margin:0!important;background:#fafafa!important;display:block!important;overflow:hidden!important;}
+  #features .feature.panel {position:relative!important;display:block!important;box-sizing:border-box!important;width:100%!important;height:504px!important;min-height:504px!important;max-width:none!important;padding:0!important;margin:0!important;overflow:visible!important;background:transparent!important;}
+  #features .feature .phone-wrap {position:absolute!important;left:0!important;top:127px!important;width:100%!important;height:304px!important;max-width:none!important;display:flex!important;justify-content:center!important;align-items:center!important;margin:0!important;padding:0!important;order:0!important;transform:none!important;opacity:1!important;}
+  #features .feature .phone-mockup {width:164px!important;min-width:164px!important;max-width:164px!important;height:304px!important;object-fit:contain!important;display:block!important;}
+  #features .feature .feature-copy {position:absolute!important;top:447px!important;left:31px!important;width:calc(100% - 62px)!important;min-width:0!important;max-width:none!important;height:136px!important;min-height:0!important;padding:0!important;margin:0!important;display:block!important;box-sizing:border-box!important;border-radius:27px!important;background:linear-gradient(112deg,#f0e7ff,#fff)!important;box-shadow:none!important;opacity:1!important;transform:none!important;order:1!important;}
+  #features .feature .feature-copy .feature-card-image {display:none!important;}
+  #features .feature .feature-copy .mobile-feature-card-text {display:block!important;position:absolute!important;inset:0!important;padding:17px 19px!important;font-family:Poppins,sans-serif;color:#9d78f0!important;}
+  .mobile-feature-card-text h3 {font-size:22px!important;line-height:1.28!important;letter-spacing:0!important;margin:0 0 8px!important;font-family:Poppins,sans-serif!important;font-weight:700!important;color:#9d78f0!important;}
+  .mobile-feature-card-text p {font-size:14px!important;line-height:1.27!important;font-family:Poppins,sans-serif!important;font-weight:400!important;margin:0!important;color:#9872dc!important;}
+  /* 05: three original full-size Figma art cards in a vertical sequence. */
+  #benefits.benefits-scroll {height:1480px!important;min-height:1480px!important;width:100%!important;margin:0!important;padding:0!important;position:relative!important;scroll-margin-top:0!important;}
+  #benefits .benefits-sticky.panel {position:relative!important;top:0!important;left:0!important;width:100%!important;height:1480px!important;min-height:1480px!important;max-height:none!important;overflow:hidden!important;isolation:isolate!important;background:linear-gradient(#bda2dd,#f9bfab)!important;}
+  #benefits .benefits-background {position:absolute!important;inset:0!important;background:url('assets/cloud-world.webp') center center / auto 100% no-repeat!important;opacity:.95!important;}
+  #benefits .benefits-background::after {content:''!important;position:absolute!important;inset:0!important;background:rgba(216,163,213,.13)!important;}
+  #benefits .benefits-word-image {position:absolute!important;z-index:1!important;left:-4px!important;top:115px!important;transform:none!important;width:398px!important;height:auto!important;max-width:none!important;opacity:1!important;}
+  #benefits .benefit-stack {position:absolute!important;inset:0!important;display:block!important;pointer-events:none!important;perspective:1600px!important;}
+  #benefits .benefit-stack .flip-card {position:absolute!important;left:51px!important;top:254px!important;display:block!important;width:246px!important;height:355px!important;min-width:0!important;min-height:0!important;max-width:none!important;max-height:none!important;aspect-ratio:auto!important;transform:none!important;pointer-events:auto!important;opacity:1!important;margin:0!important;padding:0!important;}
+  #benefits .benefit-stack .flip-card:nth-child(2) {left:94px!important;top:671px!important;}
+  #benefits .benefit-stack .flip-card:nth-child(3) {left:52px!important;top:1148px!important;height:337px!important;}
+  #benefits .benefit-stack .flip-front,#benefits .benefit-stack .flip-back {width:100%!important;height:100%!important;}
+  #benefits .benefit-stack .flip-front img,#benefits .benefit-stack .flip-back img {width:100%!important;height:100%!important;object-fit:contain!important;}
+  /* 06: yellow FAQ, 3:1-visual ribbon, form and footer. */
+  #faq.faq-section.panel {position:relative!important;width:100%!important;height:1624px!important;min-height:1624px!important;max-height:none!important;margin:0!important;padding:0!important;overflow:hidden!important;border-radius:16px!important;background:linear-gradient(180deg,#fff7df,#ffe77d)!important;}
+  #faq.faq-section > h2 {position:absolute!important;left:12px!important;top:107px!important;width:calc(100% - 24px)!important;margin:0!important;padding:0!important;opacity:1!important;transform:none!important;white-space:nowrap!important;font-family:Poppins,sans-serif!important;font-size:34px!important;letter-spacing:0!important;line-height:1.24!important;font-weight:700!important;text-align:center!important;color:#fa5556!important;}
+  #faq .faq-list {position:absolute!important;left:22px!important;top:179px!important;width:calc(100% - 44px)!important;max-width:none!important;height:auto!important;margin:0!important;padding:0!important;background:transparent!important;border-radius:13px!important;overflow:hidden!important;}
+  #faq .faq-list details {display:block!important;min-height:59px!important;border:0!important;margin:0 0 3px!important;padding:0!important;background:#fcfbfe!important;border-radius:5px!important;overflow:hidden!important;}
+  #faq .faq-list details:first-child {border-radius:13px 13px 5px 5px!important;}
+  #faq .faq-list summary {position:relative!important;display:block!important;min-height:58px!important;padding:18px 8px 18px 39px!important;font-family:Poppins,sans-serif!important;font-size:13px!important;line-height:1.25!important;font-weight:600!important;letter-spacing:0!important;color:#f64f56!important;cursor:pointer!important;}
+  #faq .faq-list summary::before {position:absolute!important;left:13px!important;top:27px!important;transform:translateY(-50%)!important;font-family:Poppins,sans-serif!important;font-size:19px!important;font-weight:400!important;line-height:1!important;}
+  #faq .faq-list details p {margin:0!important;padding:0 14px 15px 39px!important;font-family:Poppins,sans-serif!important;font-size:11px!important;line-height:1.27!important;font-weight:400!important;color:#332a47!important;}
+  #faq .photo-ribbon {position:absolute!important;top:516px!important;left:0!important;width:100%!important;height:180px!important;margin:0!important;padding:0!important;overflow:hidden!important;}
+  #faq .photo-ribbon .carousel-track {height:180px!important;gap:7px!important;padding:0!important;display:flex!important;align-items:center!important;}
+  #faq .photo-ribbon .ribbon-item img {width:111px!important;height:114px!important;object-fit:contain!important;}
+  #faq .photo-ribbon .ribbon-item--large img {width:148px!important;height:150px!important;}
+  #faq .apply {position:absolute!important;left:18px!important;top:751px!important;width:calc(100% - 36px)!important;max-width:none!important;height:451px!important;min-height:451px!important;padding:0!important;margin:0!important;border-radius:25px!important;background:#a078eb!important;box-shadow:none!important;text-align:center!important;}
+  #faq .apply h2 {position:absolute!important;top:40px!important;left:0!important;width:100%!important;font-family:Poppins,sans-serif!important;font-size:27px!important;line-height:1.25!important;font-weight:700!important;letter-spacing:0!important;color:#fff!important;margin:0!important;text-align:center!important;}
+  #faq .apply > p {position:absolute!important;top:105px!important;left:35px!important;width:calc(100% - 70px)!important;margin:0!important;color:#fff!important;font-family:Poppins,sans-serif!important;font-size:14px!important;line-height:1.25!important;font-weight:400!important;text-align:center!important;}
+  #faq .apply form {position:absolute!important;left:22px!important;top:214px!important;width:calc(100% - 44px)!important;display:grid!important;grid-template-columns:1fr!important;gap:12px!important;margin:0!important;padding:0!important;}
+  #faq .apply input {width:100%!important;max-width:none!important;height:48px!important;min-height:48px!important;margin:0!important;padding:0 21px!important;border:0!important;border-radius:24px!important;box-shadow:none!important;font-family:Poppins,sans-serif!important;font-size:14px!important;}
+  #faq .apply form button {width:100%!important;max-width:none!important;height:48px!important;min-height:48px!important;margin-top:12px!important;padding:0!important;border:0!important;border-radius:24px!important;box-shadow:none!important;background:linear-gradient(90deg,#fe5656,#ff7c60)!important;font-family:Poppins,sans-serif!important;font-weight:700!important;font-size:16px!important;}
+  #faq .footer {position:absolute!important;top:1281px!important;left:0!important;width:100%!important;max-width:none!important;height:263px!important;min-height:0!important;padding:0!important;margin:0!important;display:block!important;background:transparent!important;}
+  #faq .footer .footer-logo {position:absolute!important;top:0!important;left:calc(50% - 36.5px)!important;width:73px!important;height:74px!important;overflow:visible!important;border:0!important;border-radius:0!important;filter:none!important;}
+  #faq .footer .footer-logo img {width:100%!important;height:100%!important;object-fit:contain!important;transform:none!important;}
+  #faq .footer nav {position:absolute!important;top:105px!important;left:22px!important;right:22px!important;width:auto!important;max-width:none!important;height:76px!important;margin:0!important;padding:0!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;grid-template-rows:20px 20px!important;justify-items:center!important;align-items:center!important;align-content:space-between!important;column-gap:4px!important;row-gap:24px!important;}
+  #faq .footer nav a {font-family:Poppins,sans-serif!important;white-space:nowrap!important;display:block!important;font-size:12px!important;font-weight:700!important;line-height:1.1!important;color:#fa5556!important;margin:0!important;padding:0!important;}
+  #faq .footer nav .footer-row-break {display:none!important;}
+  #faq .footer nav a:nth-of-type(4) {grid-column:1/3!important;grid-row:2!important;justify-self:end!important;margin-right:4px!important;}
+  #faq .footer nav a:nth-of-type(5) {grid-column:3!important;grid-row:2!important;justify-self:start!important;margin-left:6px!important;}
+  #faq .footer .faq-figma-vector {width:auto!important;height:auto!important;min-height:0!important;background:none!important;mask:none!important;}
+  #faq .footer .faq-figma-vector::after {content:'FAQ';display:inline!important;font-family:Poppins,sans-serif!important;font-size:12px!important;font-weight:700!important;color:#fa5556!important;}
+  #faq .footer .footer-social {position:absolute!important;left:0!important;right:0!important;top:213px!important;height:50px!important;display:flex!important;justify-content:center!important;gap:13px!important;}
+  #faq .footer .footer-social a {width:50px!important;height:50px!important;border-radius:13px!important;background:rgba(112,105,65,.85)!important;}
+  #faq .footer .footer-social img {width:27px!important;height:27px!important;object-fit:contain!important;}
+}
+/* Narrow phones: preserve the 390px visual proportions without horizontal crop. */
+@media (max-width:374px) {
+  .mobile-figma-fan-grid {transform:scale(calc(100vw / 390));transform-origin:top left;}
+  .hero .hero-content p {font-size:clamp(12px,4vw,16px)!important;}
+  .audience .audience-header h2 {font-size:15.2vw!important;}
+  #benefits .benefit-stack .flip-card:nth-child(2) {left:calc((100% - 246px)/2)!important;}
+}
+
+/* Final: eliminate the old v33 8px margin that caused a 398px mobile viewport. */
+@media(max-width:600px){
+ html,body {width:100%!important;max-width:100%!important;overflow-x:clip!important;}
+ html body main#main > .hero.panel,
+ html body main#main > .about.panel,
+ html body main#main > .audience.panel,
+ html body main#main > .faq-section.panel {margin:0!important;margin-left:0!important;margin-right:0!important;width:100%!important;max-width:100%!important;left:0!important;right:0!important;}
+ html body main#main #benefits.benefits-scroll,
+ html body main#main #benefits .benefits-sticky.panel {margin:0!important;width:100%!important;max-width:100%!important;left:0!important;right:0!important;}
+ html body main#main #features .feature.panel {margin:0!important;width:100%!important;}
+ .skip-link:not(:focus) {display:none!important;}
+}
+
+/* Optical alignment pass against the edited phone and kitten layers in Figma. */
+@media(max-width:600px){
+ .about .about-inner .about-mobile-illustration {top:146px!important;height:398px!important;object-fit:fill!important;}
+ #features .feature .phone-mockup {width:174px!important;min-width:174px!important;max-width:174px!important;}
+}
+
+/* =============================================
+   v35 — пользовательские финальные правки в Figma,
+   Page 549:2, мобильные фреймы 550:2..552:43.
+   Только мобильная верстка, десктоп сохранен.
+============================================= */
+@media (max-width:600px) {
+  /* Figma home: heading y348, tagline y423, CTA y472. */
+  .hero .hero-content { top:348px!important; }
+  .hero .hero-content p {margin-top:15px!important;}
+  .hero .hero-button {margin-top:28px!important;}
+  /* Fixed header on approved mobile Figma x10 / x186 / x322. */
+  body .header .logo { left:10px!important;top:7px!important;width:65px!important;height:69px!important; }
+  body .header .header-cta {right:92px!important;top:18px!important;width:112px!important;height:47px!important;}
+  body .header .menu-toggle {right:18px!important;top:18px!important;width:50px!important;height:47px!important;}
+  /* About kitten: edited y194..578, heading y590. */
+  .about .about-inner .about-mobile-illustration {top:194px!important;height:384px!important;object-fit:fill!important;}
+  .about .about-mobile-copy {top:590px!important;}
+  /* Figma feature screen bounds x119 y127+504*n, 152x304. */
+  #features .feature .phone-wrap {top:127px!important;height:304px!important;}
+  #features .feature .phone-mockup {width:152px!important;min-width:152px!important;max-width:152px!important;height:304px!important;object-fit:contain!important;}
+  #features .feature .feature-copy {top:447px!important;left:31px!important;width:calc(100% - 62px)!important;}
+  /* FAQ: last text card and footer positions from user-edited frame. */
+  #faq .apply {top:751px!important;height:451px!important;min-height:451px!important;}
+  #faq .footer {top:1271px!important;}
+  #faq .footer .footer-logo {left:calc(50% - 46px)!important;width:92px!important;height:93px!important;top:0!important;}
+  #faq .footer nav {top:115px!important;}
+  #faq .footer .footer-social {top:223px!important;}
+  /* On mobile keep all features within their Figma artboard. */
+  #features.features {height:1624px!important;}
+}
+
+
+/* -------------------------------------------------------------
+   v36 / mobile spacing and document flow review
+   Applied AFTER v35 overrides. Desktop version is unaffected.
+--------------------------------------------------------------- */
+@media (max-width:600px) {
+  /* Separate the first and second panels without a harsh seam. */
+  html body main#main > section.about.panel {
+    margin-top: 20px !important;
+  }
+
+  /* Keep the entire MeowMind wordmark, including its final d, in view. */
+  .about .about-mobile-wordmark {
+    left: 2% !important;
+    width: 96% !important;
+    max-width: 96% !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
+  /* Allow the full portrait fan to move with the page on vertical scroll. */
+  html body main#main > section#for-whom.audience.panel {
+    height: auto !important;
+    min-height: 1010px !important;
+    overflow: visible !important;
+    padding: 0 0 30px !important;
+  }
+  #for-whom .mobile-figma-fan {
+    position: relative !important;
+    inset: auto !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+    margin-top: 317px !important;
+  }
+  #for-whom .mobile-figma-fan-grid {
+    width: calc(100% - 15px) !important;
+    max-width: 375px !important;
+    display: grid !important;
+    grid-template-columns: repeat(3,minmax(0,1fr)) !important;
+    column-gap: 9px !important;
+  }
+  #for-whom .mobile-people-col { min-width: 0 !important; }
+  #for-whom .mobile-portrait {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 119 / 202 !important;
+    flex: none !important;
+  }
+  #for-whom .mobile-portrait img {
+    object-fit: cover !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+  }
+
+  /* Three clickable cards in normal vertical document flow:
+     scrolling moves through them instead of being clipped to a static stage. */
+  #benefits.benefits-scroll {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+  #benefits .benefits-sticky.panel {
+    position: relative !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+  }
+  #benefits .benefits-background {
+    background-size: cover !important;
+    background-position: center !important;
+  }
+  #benefits .benefit-stack {
+    position: relative !important;
+    inset: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 44px !important;
+    padding: 255px 0 72px !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+  #benefits .benefit-stack .flip-card,
+  #benefits .benefit-stack .flip-card:nth-child(2),
+  #benefits .benefit-stack .flip-card:nth-child(3) {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: min(246px, 75vw) !important;
+    height: min(355px, 108vw) !important;
+    min-height: 0 !important;
+    margin: 0 auto !important;
+    opacity: 1 !important;
+    transform: none !important;
+    flex-shrink: 0 !important;
+  }
+  #benefits .benefit-stack .flip-card .flip-inner,
+  #benefits .benefit-stack .flip-card .flip-front,
+  #benefits .benefit-stack .flip-card .flip-back {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  #benefits .benefit-stack .flip-card img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+  }
+  /* Text and image composition on the benefit cards stays unchanged. */
+
+  /* Shorten only the space above the three signup fields. */
+  #faq .apply form { top: 204px !important; }
+
+  /* A controlled two-line centred footer menu. */
+  #faq .footer nav {
+    display: flex !important;
+    flex-flow: row wrap !important;
+    justify-content: center !important;
+    align-content: flex-start !important;
+    align-items: center !important;
+    height: auto !important;
+    min-height: 68px !important;
+    gap: 16px 17px !important;
+    top: 118px !important;
+    left: 14px !important;
+    right: 14px !important;
+    grid-template-columns: none !important;
+    grid-template-rows: none !important;
+  }
+  #faq .footer nav .footer-row-break {
+    display: block !important;
+    width: 100% !important;
+    height: 0 !important;
+    flex: 0 0 100% !important;
+    margin: -8px 0 !important;
+    padding: 0 !important;
+  }
+  #faq .footer nav a:nth-of-type(4),
+  #faq .footer nav a:nth-of-type(5) {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    justify-self: auto !important;
+    margin: 0 !important;
+  }
+}
+/* On 320–374px phones, the same structure remains fully visible. */
+@media(max-width:374px){
+  #for-whom .mobile-figma-fan-grid {
+    transform: none !important;
+  }
+}
+
+/* Keep the FINAL letter d of the cloud section wordmark visible on phones. */
+@media(max-width:600px) {
+  #benefits .benefits-word-image {
+    left: 3% !important;
+    width: 94% !important;
+    max-width: 94% !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+}
+
+/* ---------------------------------------------------------
+   v37: three pinpoint mobile corrections from the 27 Oct
+   annotated screenshots; desktop, typography and approved
+   interactions remain untouched.
+------------------------------------------------------------ */
+@media (max-width:600px) {
+  /* Keep the cat at exactly the same image scale; move its silhouette
+     to the optical centre without resizing the artwork. */
+  .about .about-inner .about-mobile-illustration {
+    transform: translateX(22px) !important;
+  }
+
+  /* Avoid first-child margin collapse: the fan was dragging its whole
+     section down by 317px and putting heading ON TOP of portraits. */
+  html body main#main > section#for-whom.audience.panel {
+    position: relative !important;
+    height: 1010px !important;
+    min-height: 1010px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+  #for-whom .mobile-figma-fan {
+    position: absolute !important;
+    inset: auto 0 auto 0 !important;
+    top: 317px !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    overflow: visible !important;
+  }
+  /* Bring just the FIRST feature (phone plus description) closer
+     to the last row of portraits, preserving their own spacing. */
+  #features .feature:first-of-type .phone-wrap {
+    top: 75px !important;
+  }
+  #features .feature:first-of-type .feature-copy {
+    top: 395px !important;
+  }
+}
+/* Feather the exposed left edge of the unchanged-size illustration,
+   so moving the cat does not introduce a hard rectangular seam. */
+@media (max-width:600px) {
+  .about .about-inner .about-mobile-illustration {
+    -webkit-mask-image: linear-gradient(to right, transparent 0px, #000 22px) !important;
+    mask-image: linear-gradient(to right, transparent 0px, #000 22px) !important;
+  }
+}
+/* The centre photo column is 67px lower than the others. Its height
+   scales with the viewport, so allow enough room at 320–600px and
+   never cut off its last card on 390px phones. */
+@media (max-width:600px) {
+  html body main#main > section#for-whom.audience.panel {
+    height: min(calc(170vw + 384px), 1054px) !important;
+    min-height: min(calc(170vw + 384px), 1054px) !important;
+  }
+}
+
+/* v38 — Restore COMPLETE paw silhouette and COMPLETE headings on mobile.
+   This block intentionally touches only the two wordmarks and the About image. */
+@media(max-width:600px) {
+  .about .about-mobile-wordmark {
+    content: url("assets/mobile-wordmark-complete-v38.png") !important;
+    left: 1% !important;
+    width: 98% !important;
+    max-width: 98% !important;
+    height: 76px !important;
+    object-fit: fill !important;
+    top: 115px !important;
+  }
+  #benefits .benefits-word-image {
+    content: url("assets/mobile-wordmark-complete-v38.png") !important;
+    left: 1% !important;
+    width: 98% !important;
+    max-width: 98% !important;
+    height: 76px !important;
+    object-fit: fill !important;
+    top: 115px !important;
+  }
+  .about .about-inner .about-mobile-illustration {
+    content: url("assets/about-mobile-kitten-full-v38.png") !important;
+    transform: none !important;
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+  }
+}

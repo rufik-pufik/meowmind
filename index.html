@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#fafafa" />
+  <meta name="description" content="MeowMind — здоровье кота без мифов и паники. Учебный концепт информационного сервиса о заботе о кошках." />
+  <title>MeowMind — здоровье кота без мифов и паники</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="mobile-figma-v34.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+<a href="#main" class="skip-link">Перейти к содержимому</a>
+<header class="header" id="site-header">
+  <a href="#home" class="logo" aria-label="MeowMind — наверх"><img src="https://raw.githubusercontent.com/rufik-pufik/meowmind/main/assets/brand-logo.svg" onerror="this.onerror=null;this.src='assets/logo-fallback.png'" alt="" /><span class="visually-hidden">MeowMind</span></a>
+  <nav class="nav" id="top-nav" aria-label="Основная навигация">
+    <a href="#about" data-section="about">О нас</a>
+    <a href="#for-whom" data-section="for-whom">Для кого</a>
+    <a href="#features" data-section="features">Возможности</a>
+    <a href="#benefits" data-section="benefits">Преимущества</a>
+    <a href="#faq" data-section="faq">FAQ</a>
+  </nav>
+  <a href="#apply" class="pill-button small header-cta">Заявка</a>
+  <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="top-nav"><span></span><span></span><span></span></button>
+</header>
+<main id="main">
+  <section class="hero panel" id="home" aria-label="MeowMind — главный экран">
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.webp"><source src="assets/hero-cat.mp4" type="video/mp4" /></video>
+    <div class="hero-shade"></div>
+    <div class="hero-content">
+      <h1 class="hero-title hero-title-image"><img src="assets/meowmind-title-original.png" alt="MeowMind" width="2048" height="384" fetchpriority="high" /></h1>
+      <p>Здоровье кота — без мифов и паники</p>
+      <a href="#apply" class="pill-button hero-button">Оставить заявку</a>
+    </div>
+    <div class="hero-social" aria-label="Наши социальные сети">
+      <a class="social-circle" aria-label="Telegram" title="Telegram" href="https://t.me/Kotologiya_meow" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/rufik-pufik/meowmind/main/assets/icon-telegram.svg" alt="" loading="eager" onerror="this.onerror=null;this.src='assets/icon-telegram.svg'" /></a>
+      <a class="social-circle" aria-label="Дзен" title="Дзен" href="https://dzen.ru/id/68fb5636956dea4385c7b733" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/rufik-pufik/meowmind/main/assets/icon-dzen.svg" alt="" loading="eager" onerror="this.onerror=null;this.src='assets/icon-dzen.svg'" /></a>
+      <a class="social-circle" aria-label="ВКонтакте" title="ВКонтакте" href="https://vk.ru/koto_logia" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/rufik-pufik/meowmind/main/assets/icon-vk.svg" alt="" loading="eager" onerror="this.onerror=null;this.src='assets/icon-vk.svg'" /></a>
+    </div>
+  </section>
+  <section class="wordmark panel" id="wordmark" aria-label="Знакомство с MeowMind">
+    <div class="wordmark-contents wordmark-scene">
+      <h2 class="visually-hidden">MeowMind</h2>
+      <img class="wordmark-letters" src="assets/wordmark-figma-vector.svg" alt="" aria-hidden="true" />
+      <!-- One complete kitten during take-off: hind paws are fully visible.
+           As it drops into O, only the portion outside the portal disappears.
+           Both aligned images are derived from the same original transparent PNG. -->
+      <!-- The O portal is anchored to the text, NOT attached to the jumping cat. -->
+      <span class="wordmark-o-portal-static" aria-hidden="true"></span>
+      <span class="wordmark-o-actor" aria-hidden="true">
+        <img class="wordmark-o-kitten-full" src="assets/cat-o-full-paws.png" alt="" loading="eager" />
+        <img class="wordmark-o-kitten-settled" src="assets/cat-o-settled.png" alt="" loading="eager" />
+      </span>
+      <img class="wordmark-jumping-cat" src="https://raw.githubusercontent.com/rufik-pufik/meowmind/main/assets/cat-jump-original-figma.svg?v=2" onerror="this.onerror=null;this.src='assets/cat-jump-local-fallback.png'" alt="Серый котёнок подпрыгивает и садится на букву n" loading="lazy" />
+    </div>
+  </section>
+  <section class="about panel" id="about" data-about-variant="0" aria-labelledby="about-title">
+    <div class="about-inner">
+      <img class="about-mobile-wordmark" src="assets/about-wordmark.png" alt="" aria-hidden="true" />
+      <!-- Exact Figma exports, with the repeated header cleaned out;
+           the single fixed header above stays interactive as requested. -->
+      <img id="about-art" class="about-art" src="assets/about-figma-card-01.png" alt="" width="2048" height="1264" loading="eager" />
+      <!-- The original desktop art stays intact. This alternate content is only visible on phones. -->
+      <img id="about-mobile-art" class="about-mobile-illustration" src="assets/about-mobile-kitten-clean.png" alt="Рыжий котёнок MeowMind" loading="lazy" />
+      <div class="about-mobile-copy" aria-hidden="true">
+        <h2 id="about-mobile-title">О нас</h2>
+        <p id="about-mobile-desc">Помогаем владельцам котов чувствовать уверенность, а питомцам — получать правильный уход</p>
+      </div>
+      <div class="about-accessibility visually-hidden" aria-live="polite" aria-atomic="true">
+        <h2 id="about-title">О нас</h2>
+        <p id="about-desc">Помогаем владельцам котов чувствовать уверенность, а питомцам — получать правильный уход</p>
+      </div>
+      <div class="about-tabs" role="tablist" aria-label="Три карточки о MeowMind">
+        <button type="button" class="about-tab active" role="tab" aria-selected="true" aria-label="01 — О нас" data-slide="0" data-label="01">01</button>
+        <button type="button" class="about-tab" role="tab" aria-selected="false" aria-label="02 — Проверенные знания" data-slide="1" data-label="02">02</button>
+        <button type="button" class="about-tab" role="tab" aria-selected="false" aria-label="03 — Забота без паники" data-slide="2" data-label="03">03</button>
+      </div>
+    </div>
+  </section>
+  <section class="audience panel" id="for-whom" aria-labelledby="audience-heading">
+    <div class="audience-header reveal">
+      <span class="reaction reaction-heart" aria-hidden="true">❤️ 250</span>
+      <span class="reaction reaction-fire" aria-hidden="true">🔥 150</span>
+      <span class="reaction reaction-party" aria-hidden="true">🥳</span>
+      <span class="reaction reaction-shock" aria-hidden="true">😱</span>
+      <span class="reaction reaction-flushed" aria-hidden="true">😳</span>
+      <h2 id="audience-heading">Для кого</h2>
+      <p>Присоединяйтесь!</p>
+    </div>
+
+    <div class="mobile-figma-fan" aria-label="Галерея владельцев котов"><div class="mobile-figma-fan-grid"><div class="mobile-people-col"><figure class="mobile-portrait"><img src="assets/audience-owner-04-02.webp" alt="Владелец с котом" loading="lazy" /></figure><figure class="mobile-portrait"><img src="assets/audience-owner-02-02.webp" alt="Владелец с котом" loading="lazy" /></figure><figure class="mobile-portrait"><img src="assets/audience-owner-03-01.webp" alt="Владелец с котом" loading="lazy" /></figure></div><div class="mobile-people-col"><figure class="mobile-portrait"><img src="assets/audience-owner-03-02.webp" alt="Владелец с котом" loading="lazy" /></figure><figure class="mobile-portrait"><img src="assets/audience-owner-06-02.webp" alt="Владелец с котом" loading="lazy" /></figure><figure class="mobile-portrait"><img src="assets/audience-owner-04-01.webp" alt="Владелец с котом" loading="lazy" /></figure></div><div class="mobile-people-col"><figure class="mobile-portrait"><img src="assets/audience-owner-02-01.webp" alt="Владелец с котом" loading="lazy" /></figure><figure class="mobile-portrait"><img src="assets/audience-owner-07-02.webp" alt="Владелец с котом" loading="lazy" /></figure><figure class="mobile-portrait"><img src="assets/audience-owner-01-01.webp" alt="Владелец с котом" loading="lazy" /></figure></div></div></div>
+    <div class="audience-fan reveal" role="group" aria-label="Фотографии владельцев кошек">
+      <div class="carousel-track">
+        <div class="people-column people-column--1">
+          <figure class="portrait-card"><img src="assets/audience-owner-01-01.webp" alt="Девушка спит рядом с пушистым котом" loading="lazy" draggable="false"></figure>
+          <figure class="portrait-card"><img src="assets/audience-owner-01-02.webp" alt="Кудрявая девушка держит кошку на руках" loading="lazy" draggable="false"></figure>
+        </div>
+        <div class="people-column people-column--2">
+          <figure class="portrait-card"><img src="assets/audience-owner-02-01.webp" alt="Мужчина держит полосатого кота на плечах у камина" loading="lazy" draggable="false"></figure>
+          <figure class="portrait-card"><img src="assets/audience-owner-02-02.webp" alt="Мужчина обнимает кота" loading="lazy" draggable="false"></figure>
+        </div>
+        <div class="people-column people-column--3">
+          <figure class="portrait-card"><img src="assets/audience-owner-03-01.webp" alt="Парень сидит у окна с пушистым серым котом" loading="lazy" draggable="false"></figure>
+          <figure class="portrait-card"><img src="assets/audience-owner-03-02.webp" alt="Пара гладит рыжего кота" loading="lazy" draggable="false"></figure>
+        </div>
+        <div class="people-column people-column--4">
+          <figure class="portrait-card"><img src="assets/audience-owner-04-01.webp" alt="Девушка держит абиссинскую кошку" loading="lazy" draggable="false"></figure>
+          <figure class="portrait-card"><img src="assets/audience-owner-04-02.webp" alt="Девушка в шапке держит пушистую кошку" loading="lazy" draggable="false"></figure>
+        </div>
+        <div class="people-column people-column--5">
+          <figure class="portrait-card"><img src="assets/audience-owner-05-01.webp" alt="Мужчина в очках обнимает рыжего кота" loading="lazy" draggable="false"></figure>
+          <figure class="portrait-card"><img src="assets/audience-owner-05-02.webp" alt="Девушка держит рыжего кота на руках" loading="lazy" draggable="false"></figure>
+        </div>
+        <div class="people-column people-column--6">
+          <figure class="portrait-card"><img src="assets/audience-owner-06-01.webp" alt="Девушка целует полосатого кота" loading="lazy" draggable="false"></figure>
+          <figure class="portrait-card"><img src="assets/audience-owner-06-02.webp" alt="Блондинка позирует с белым котом" loading="lazy" draggable="false"></figure>
+        </div>
+        <div class="people-column people-column--7">
+          <figure class="portrait-card"><img src="assets/audience-owner-07-01.webp" alt="Мужчина держит маленького чёрного котёнка" loading="lazy" draggable="false"></figure>
+          <figure class="portrait-card"><img src="assets/audience-owner-07-02.webp" alt="Мужчина обнимает кота" loading="lazy" draggable="false"></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="features" id="features">
+    <h2 class="visually-hidden">Возможности</h2>
+    <article class="feature panel">
+      <div class="feature-copy reveal"><div class="mobile-feature-card-text"><h3>База знаний</h3><p>Понятные материалы о здоровье, поведении и уходе за котом с указанием источников.</p></div><img class="feature-card-image" src="assets/feature-card-01.png" alt="База знаний. Понятные материалы о здоровье, поведении и уходе за котом с указанием источников." loading="lazy" /></div>
+      <div class="phone-wrap reveal">
+        <img src="assets/feature-screen-01.png" alt="Экран База знаний в приложении MeowMind" class="phone-mockup" loading="lazy" />
+      </div>
+    </article>
+    <article class="feature panel feature-alt">
+      <div class="feature-copy reveal"><div class="mobile-feature-card-text"><h3>Навигатор</h3><p>Разобраться в ситуации, узнать тревожные признаки и понять, когда нужен ветеринар.</p></div><img class="feature-card-image" src="assets/feature-card-02.png" alt="Навигатор. Разобраться в ситуации, узнать тревожные признаки и понять, когда нужен ветеринар." loading="lazy" /></div>
+      <div class="phone-wrap reveal">
+        <img src="assets/feature-screen-02.png" alt="Экран Навигатор в приложении MeowMind" class="phone-mockup" loading="lazy" />
+      </div>
+    </article>
+    <article class="feature panel">
+      <div class="feature-copy reveal"><div class="mobile-feature-card-text"><h3>Чек-листы</h3><p>Подготовиться к визиту в клинику и ничего важного не забыть во время ухода.</p></div><img class="feature-card-image" src="assets/feature-card-03.png" alt="Чек-листы. Подготовиться к визиту в клинику и ничего важного не забыть во время ухода." loading="lazy" /></div>
+      <div class="phone-wrap reveal">
+        <img src="assets/feature-screen-03.png" alt="Экран Чек-листы в приложении MeowMind" class="phone-mockup" loading="lazy" />
+      </div>
+    </article>
+  </section>
+  <section class="benefits-scroll" id="benefits" aria-label="Наши преимущества">
+    <div class="benefits-sticky panel">
+      <div class="benefits-background" aria-hidden="true"></div>
+      <img class="benefits-word-image" src="assets/about-wordmark.png" alt="" aria-hidden="true" />
+      <div class="benefit-stack" aria-label="Три интерактивные карточки преимуществ">
+        <button type="button" class="flip-card" data-index="0" aria-label="Без лишнего перегруза. Нажмите, чтобы перевернуть" aria-pressed="false">
+          <span class="flip-inner">
+            <span class="flip-front"><img src="assets/benefit-front-01.png" alt="Без лишнего перегруза" /></span>
+            <span class="flip-back"><img src="assets/benefit-back-01.png" alt="Один вопрос — ясное объяснение и понятный следующий шаг" /></span>
+          </span>
+        </button>
+        <button type="button" class="flip-card" data-index="1" aria-label="С заботой о владельце. Нажмите, чтобы перевернуть" aria-pressed="false">
+          <span class="flip-inner">
+            <span class="flip-front"><img src="assets/benefit-front-02.png" alt="С заботой о владельце" /></span>
+            <span class="flip-back"><img src="assets/benefit-back-02.png" alt="Спокойный тон вместо чувства вины и пугающих обещаний" /></span>
+          </span>
+        </button>
+        <button type="button" class="flip-card" data-index="2" aria-label="Опираясь на факты. Нажмите, чтобы перевернуть" aria-pressed="false">
+          <span class="flip-inner">
+            <span class="flip-front"><img src="assets/benefit-front-03.png" alt="Опираясь на факты" /></span>
+            <span class="flip-back"><img src="assets/benefit-back-03.png" alt="Источники, советы осторожные и честные" /></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </section>
+  <section class="faq-section panel" id="faq">
+    <h2 class="reveal">Остались вопросы?</h2>
+    <div class="faq-list">
+      <details open><summary>Может ли MeowMind поставить диагноз?</summary><p>Нет. Это информационный помощник, не замена ветеринарного врача. При тревожных симптомах необходимо обратиться в клинику.</p></details>
+      <details><summary>На какие источники опирается сервис?</summary><p>На ветеринарные рекомендации и научные материалы. Источники будут указаны.</p></details>
+      <details><summary>MeowMind уже можно установить?</summary><p>Пока нет. Сервис находится в разработке.</p></details>
+      <details><summary>Для кого создан MeowMind?</summary><p>Для владельцев кошек, которые хотят заботиться о питомцах без мифов и паники.</p></details>
+    </div>
+    <div class="carousel-wrap photo-ribbon" data-marquee="ribbon" aria-label="Фотографии котиков и их владельцев">
+      <div class="carousel-track">
+        <div class="ribbon-item ribbon-item--small"><img src="assets/ribbon-01-white-cat.png" alt="Белая кошечка" loading="lazy" draggable="false" /></div>
+        <div class="ribbon-item ribbon-item--large"><img src="assets/ribbon-02-woman-cat.png" alt="Девушка с белым котом" loading="lazy" draggable="false" /></div>
+        <div class="ribbon-item ribbon-item--small"><img src="assets/ribbon-03-kitten.png" alt="Маленький полосатый котёнок" loading="lazy" draggable="false" /></div>
+        <div class="ribbon-item ribbon-item--large"><img src="assets/ribbon-04-man-cat.png" alt="Мужчина и полосатый кот" loading="lazy" draggable="false" /></div>
+        <div class="ribbon-item ribbon-item--large"><img src="assets/ribbon-05-ginger-kitten.png" alt="Светлый котёнок" loading="lazy" draggable="false" /></div>
+        <div class="ribbon-item ribbon-item--small"><img src="assets/ribbon-06-woman-kiss-cat.png" alt="Девушка целует кошку" loading="lazy" draggable="false" /></div>
+        <div class="ribbon-item ribbon-item--large"><img src="assets/ribbon-07-sleeping-kittens.png" alt="Два спящих котёнка" loading="lazy" draggable="false" /></div>
+        <div class="ribbon-item ribbon-item--small"><img src="assets/ribbon-08-woman-kitten.png" alt="Девушка и полосатая кошка" loading="lazy" draggable="false" /></div>
+      </div>
+    </div>
+    <section class="apply" id="apply">
+      <h2>Узнайте первыми</h2><p>Оставь контакт, чтобы узнать о тестировании и запуске будущего сервиса</p>
+      <form id="demo-form" autocomplete="off"><label class="visually-hidden" for="visitor-name">Введите имя</label><input id="visitor-name" name="name" placeholder="Введите имя" required maxlength="60" /><label class="visually-hidden" for="visitor-phone">Номер телефона</label><input id="visitor-phone" name="phone" placeholder="+7..." type="tel" inputmode="tel" required maxlength="25" /><button type="submit" class="pill-button">Отправить</button></form>
+    </section>
+    <footer class="footer">
+      <a href="#home" class="footer-logo" aria-label="Вернуться наверх"><img src="https://raw.githubusercontent.com/rufik-pufik/meowmind/main/assets/brand-logo.svg" alt="" loading="lazy" onerror="this.onerror=null;this.src='assets/logo-fallback.png'" /></a>
+      <nav aria-label="Навигация в подвале"><a href="#about">О нас</a><a href="#for-whom">Для кого</a><a href="#features">Возможности</a><span class="footer-row-break" aria-hidden="true"></span><a href="#benefits">Преимущества</a><a href="#faq" aria-label="FAQ"><span class="faq-figma-vector" aria-hidden="true"></span><span class="visually-hidden">FAQ</span></a></nav>
+      <div class="footer-social"><a aria-label="Telegram" href="https://t.me/Kotologiya_meow" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/rufik-pufik/meowmind/main/assets/icon-telegram.svg" alt="" loading="lazy" onerror="this.onerror=null;this.src='assets/icon-telegram.svg'" /></a><a aria-label="Дзен" href="https://dzen.ru/id/68fb5636956dea4385c7b733" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/rufik-pufik/meowmind/main/assets/icon-dzen.svg" alt="" loading="lazy" onerror="this.onerror=null;this.src='assets/icon-dzen.svg'" /></a><a aria-label="VK" href="https://vk.ru/koto_logia" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/rufik-pufik/meowmind/main/assets/icon-vk.svg" alt="" loading="lazy" onerror="this.onerror=null;this.src='assets/icon-vk.svg'" /></a></div>
+    </footer>
+  </section>
+</main>
+
+</body>
+</html>
