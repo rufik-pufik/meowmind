@@ -246,9 +246,8 @@ details.forEach(item => item.addEventListener('toggle', () => {
   if (item.open) details.forEach(other => { if (other !== item) other.open = false; });
 }));
 
-// Accessible dismissible demo confirmation. No personal data is stored or submitted.
+// Accessible demo confirmation. No personal data is stored or submitted.
 const form = $('#demo-form');
-const originalFormChildren = [...form.childNodes];
 form.addEventListener('submit', e => {
   e.preventDefault();
 
@@ -257,26 +256,14 @@ form.addEventListener('submit', e => {
   confirmation.setAttribute('role', 'status');
   confirmation.setAttribute('aria-live', 'polite');
 
-  const dismiss = document.createElement('button');
-  dismiss.type = 'button';
-  dismiss.className = 'demo-dismiss';
-  dismiss.setAttribute('aria-label', 'Закрыть подтверждение и вернуться к форме');
-  dismiss.textContent = '×';
-  dismiss.addEventListener('click', () => {
-    form.replaceChildren(...originalFormChildren);
-    form.reset();
-    form.querySelector('input')?.focus({preventScroll: true});
-  });
-
   const title = document.createElement('strong');
   title.textContent = 'Готово! Демо-заявка оформлена 🐾';
   const explanation = document.createElement('span');
   explanation.textContent = 'Это учебный проект. Ваши контакты не сохраняются и никому не отправляются.';
-  confirmation.append(dismiss, title, explanation);
+  confirmation.append(title, explanation);
   form.replaceChildren(confirmation);
 
   // Report only the anonymous demo completion event to the Tilda parent.
-  // Dismissing the message never triggers another goal.
   if (window.parent !== window) {
     window.parent.postMessage({
       type: 'meowmind:analytics',
