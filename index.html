@@ -11,6 +11,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="mobile-figma-v34.css" />
+<style>
+  .apply .demo-disclaimer{grid-column:1/-1;display:block;color:#fff;font-size:12px;line-height:1.35;text-align:center;opacity:.9}
+  .apply .demo-success{grid-column:1/-1;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px;width:100%;min-height:134px;padding:22px 18px;border:1px solid rgba(255,255,255,.38);border-radius:24px;background:rgba(255,255,255,.13);color:#fff;text-align:center;box-sizing:border-box}
+  .apply .demo-success strong{font-size:clamp(18px,2.5vw,25px);font-weight:700;line-height:1.25}
+  .apply .demo-success span{font-size:13px;line-height:1.4;max-width:440px}
+</style>
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -195,7 +201,7 @@
     </div>
     <section class="apply" id="apply">
       <h2>Узнайте первыми</h2><p>Оставь контакт, чтобы узнать о тестировании и запуске будущего сервиса</p>
-      <form id="demo-form" autocomplete="off"><label class="visually-hidden" for="visitor-name">Введите имя</label><input id="visitor-name" name="name" placeholder="Введите имя" required maxlength="60" /><label class="visually-hidden" for="visitor-phone">Номер телефона</label><input id="visitor-phone" name="phone" placeholder="+7..." type="tel" inputmode="tel" required maxlength="25" /><button type="submit" class="pill-button">Отправить</button></form>
+      <form id="demo-form" autocomplete="off"><label class="visually-hidden" for="visitor-name">Введите имя</label><input id="visitor-name" name="name" placeholder="Введите имя" required maxlength="60" /><label class="visually-hidden" for="visitor-phone">Номер телефона</label><input id="visitor-phone" name="phone" placeholder="+7..." type="tel" inputmode="tel" required maxlength="25" /><button type="submit" class="pill-button">Отправить</button><small class="demo-disclaimer">Учебная демо-форма: контакты не сохраняются и не отправляются.</small></form>
     </section>
     <footer class="footer">
       <a href="#home" class="footer-logo" aria-label="Вернуться наверх"><img src="https://raw.githubusercontent.com/rufik-pufik/meowmind/main/assets/brand-logo.svg" alt="" loading="lazy" onerror="this.onerror=null;this.src='assets/logo-fallback.png'" /></a>
