@@ -333,3 +333,23 @@ if (wordmarkSection) {
   reducedMotion.addEventListener('change', queueUpdate);
   update();
 })();
+
+
+// MeowMind analytics: notify the Tilda parent when a visitor opens the request form.
+// This sends only an event name, never the visitor's name or phone number.
+// The parent Tilda page owns the Yandex Metrica counter and attributes the visit.
+(function reportApplyClicksToTilda() {
+  const tildaOrigin = 'https://nearly-motivating-fox.tilda.ws';
+  if (window.parent === window) return;
+
+  document.addEventListener('click', event => {
+    const link = event.target instanceof Element
+      ? event.target.closest('a[href="#apply"]')
+      : null;
+    if (!link) return;
+    window.parent.postMessage({
+      type: 'meowmind:analytics',
+      goal: 'meow_apply_click'
+    }, tildaOrigin);
+  });
+})();
