@@ -246,15 +246,30 @@ details.forEach(item => item.addEventListener('toggle', () => {
   if (item.open) details.forEach(other => { if (other !== item) other.open = false; });
 }));
 
-// Demo form: accepts input and validates locally; DOES NOT store or submit user data.
+// Accessible demo confirmation. No personal data is stored or submitted.
 const form = $('#demo-form');
 form.addEventListener('submit', e => {
   e.preventDefault();
-  // Visual-only demo: no network request, no data capture, no extra text below the form.
-  const submit = form.querySelector('button[type=submit]');
-  submit.classList.remove('demo-tapped');
-  void submit.offsetWidth;
-  submit.classList.add('demo-tapped');
+
+  const confirmation = document.createElement('div');
+  confirmation.className = 'demo-success';
+  confirmation.setAttribute('role', 'status');
+  confirmation.setAttribute('aria-live', 'polite');
+
+  const title = document.createElement('strong');
+  title.textContent = 'Готово! Демо-заявка оформлена 🐾';
+  const explanation = document.createElement('span');
+  explanation.textContent = 'Это учебный проект. Ваши контакты не сохраняются и никому не отправляются.';
+  confirmation.append(title, explanation);
+  form.replaceChildren(confirmation);
+
+  // Report only the anonymous demo completion event to the Tilda parent.
+  if (window.parent !== window) {
+    window.parent.postMessage({
+      type: 'meowmind:analytics',
+      goal: 'meow_demo_form_complete'
+    }, 'https://nearly-motivating-fox.tilda.ws');
+  }
 });
 
 // Social links are native <a> links in index.html and work without JavaScript.
